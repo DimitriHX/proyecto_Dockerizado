@@ -1,55 +1,55 @@
-export default function HomePage() {
-  const systemMetrics = [
+export default function PaginaInicio() {
+  const metricasSistema = [
     {
-      label: "Operational Uptime",
-      value: "99.99%",
-      change: "+0.02% this month",
-      positive: true,
+      etiqueta: "Disponibilidad Operativa",
+      valor: "99.99%",
+      cambio: "+0.02% este mes",
+      positivo: true,
     },
     {
-      label: "Median Response Latency",
-      value: "18.4 ms",
-      change: "-4.1 ms p95 optimization",
-      positive: true,
+      etiqueta: "Latencia Promedio de Respuesta",
+      valor: "18.4 ms",
+      cambio: "-4.1 ms en percentil 95",
+      positivo: true,
     },
     {
-      label: "Memory Footprint",
-      value: "42.8 MB",
-      change: "Alpine minimal base",
-      positive: true,
+      etiqueta: "Huella de Memoria",
+      valor: "42.8 MB",
+      cambio: "Base mínima Alpine",
+      positivo: true,
     },
     {
-      label: "Active Deployments",
-      value: "14 / 14",
-      change: "All regions healthy",
-      positive: true,
+      etiqueta: "Nodos Activos en Producción",
+      valor: "14 / 14",
+      cambio: "Todas las regiones operativas",
+      positivo: true,
     },
   ];
 
-  const modules = [
+  const modulosArquitectura = [
     {
-      title: "Isolated Container Runtimes",
-      description:
-        "Deterministic, immutable multi-stage builds guaranteeing consistent runtime behavior from local environments to high-concurrency production clusters.",
-      tag: "Infrastructure",
+      titulo: "Entornos de Ejecución Aislados",
+      descripcion:
+        "Compilaciones multi-stage deterministas e inmutables que garantizan un comportamiento idéntico desde el entorno local hasta clústeres de alta concurrencia.",
+      etiqueta: "Infraestructura",
     },
     {
-      title: "Optimized Standalone Binary",
-      description:
-        "Minimal runtime dependency footprint leveraging standalone production tracing, non-root execution policies, and musl-optimized native binaries.",
-      tag: "Performance",
+      titulo: "Binario Standalone Optimizado",
+      descripcion:
+        "Mínima huella de dependencias en tiempo de ejecución mediante análisis de dependencias standalone, políticas de usuario no-root y binarios optimizados para musl.",
+      etiqueta: "Rendimiento",
     },
     {
-      title: "Automated Resiliency & Telemetry",
-      description:
-        "Health checks, zero-downtime container lifecycles, and structured telemetry streams designed for continuous integration and enterprise compliance.",
-      tag: "Reliability",
+      titulo: "Resiliencia y Telemetría Continua",
+      descripcion:
+        "Comprobaciones de salud, ciclo de vida de contenedores sin tiempo de inactividad y métricas estructuradas para integración y entrega continua empresarial.",
+      etiqueta: "Confiabilidad",
     },
   ];
 
   return (
     <div className="flex min-h-screen flex-col bg-slate-950 text-slate-100">
-      {/* Top Header */}
+      {/* Barra de Navegación Superior */}
       <header className="border-b border-slate-800/80 bg-slate-950/70 backdrop-blur sticky top-0 z-50">
         <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4">
           <div className="flex items-center space-x-3">
@@ -69,19 +69,19 @@ export default function HomePage() {
           <div className="flex items-center space-x-4">
             <div className="flex items-center space-x-2 text-xs text-slate-300 bg-slate-900 border border-slate-800 rounded-full px-3 py-1">
               <span className="inline-block h-2 w-2 rounded-full bg-emerald-400 animate-pulse" />
-              <span>System Operational</span>
+              <span>Sistema Operativo</span>
             </div>
             <button
               type="button"
               className="hidden sm:inline-flex items-center justify-center rounded-md bg-blue-600 px-3.5 py-1.5 text-xs font-semibold text-white shadow-sm hover:bg-blue-500 transition-colors"
             >
-              Enterprise Portal
+              Portal Corporativo
             </button>
           </div>
         </div>
       </header>
 
-      {/* Hero Section */}
+      {/* Sección Principal (Hero) */}
       <main className="flex-1">
         <section className="relative overflow-hidden border-b border-slate-800/80 py-20 sm:py-28">
           <div className="absolute inset-0 bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(59,130,246,0.15),rgba(255,255,255,0))]" />
@@ -89,53 +89,53 @@ export default function HomePage() {
           <div className="relative mx-auto max-w-7xl px-6">
             <div className="max-w-3xl">
               <div className="inline-flex items-center space-x-2 rounded-full border border-blue-500/30 bg-blue-500/10 px-3 py-1 text-xs font-medium text-blue-400 mb-6">
-                <span>Production Architecture</span>
+                <span>Arquitectura de Producción</span>
                 <span className="text-slate-500">|</span>
                 <span>Next.js & Docker Multi-Stage</span>
               </div>
               <h1 className="text-4xl font-bold tracking-tight text-white sm:text-6xl text-balance">
-                High-performance platform engineered for cloud scale.
+                Plataforma de alto rendimiento diseñada para la nube empresarial.
               </h1>
               <p className="mt-6 text-lg leading-8 text-slate-300 text-balance">
-                A robust, enterprise-grade cloud native application designed for resilience,
-                predictable reproducibility, and low-latency workloads across distributed cloud infrastructure.
+                Aplicación web nativa de la nube, diseñada para alta resiliencia,
+                reproducibilidad determinista y cargas de trabajo de baja latencia en entornos distribuidos.
               </p>
               <div className="mt-8 flex flex-wrap gap-4">
                 <button
                   type="button"
                   className="rounded-lg bg-blue-600 px-5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-blue-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600 transition-colors"
                 >
-                  Access Platform
+                  Acceder a la Plataforma
                 </button>
                 <button
                   type="button"
                   className="rounded-lg border border-slate-700 bg-slate-900/60 px-5 py-2.5 text-sm font-semibold text-slate-200 hover:bg-slate-800 transition-colors"
                 >
-                  System Architecture
+                  Arquitectura del Sistema
                 </button>
               </div>
             </div>
           </div>
         </section>
 
-        {/* System Telemetry & Metrics */}
+        {/* Métricas y Telemetría */}
         <section className="py-12 border-b border-slate-800/80 bg-slate-900/30">
           <div className="mx-auto max-w-7xl px-6">
             <h2 className="text-xs font-semibold uppercase tracking-wider text-slate-400 mb-6">
-              Platform Vital Metrics
+              Métricas Vitales de la Plataforma
             </h2>
             <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
-              {systemMetrics.map((metric) => (
+              {metricasSistema.map((metrica) => (
                 <div
-                  key={metric.label}
+                  key={metrica.etiqueta}
                   className="rounded-xl border border-slate-800 bg-slate-900/60 p-5 shadow-sm"
                 >
-                  <p className="text-xs font-medium text-slate-400">{metric.label}</p>
+                  <p className="text-xs font-medium text-slate-400">{metrica.etiqueta}</p>
                   <p className="mt-2 text-3xl font-semibold tracking-tight text-white">
-                    {metric.value}
+                    {metrica.valor}
                   </p>
                   <p className="mt-2 text-xs text-emerald-400 font-medium">
-                    {metric.change}
+                    {metrica.cambio}
                   </p>
                 </div>
               ))}
@@ -143,36 +143,36 @@ export default function HomePage() {
           </div>
         </section>
 
-        {/* Core Architecture Capabilities */}
+        {/* Capacidades de Arquitectura */}
         <section className="py-20">
           <div className="mx-auto max-w-7xl px-6">
             <div className="max-w-2xl mb-12">
               <h2 className="text-2xl font-bold tracking-tight text-white sm:text-3xl">
-                Infrastructure Architecture & Governance
+                Gobernanza y Arquitectura de Infraestructura
               </h2>
               <p className="mt-3 text-slate-400 text-sm leading-relaxed">
-                Standardized patterns enforce security boundaries, resource caps, and fast cold-start performance across containerized nodes.
+                Estándares de seguridad que delimitan privilegios, controlan recursos y garantizan un arranque ultrarrápido en contenedores productivos.
               </p>
             </div>
 
             <div className="grid grid-cols-1 gap-6 md:grid-cols-3">
-              {modules.map((mod) => (
+              {modulosArquitectura.map((modulo) => (
                 <div
-                  key={mod.title}
+                  key={modulo.titulo}
                   className="rounded-2xl border border-slate-800 bg-slate-900/40 p-6 flex flex-col justify-between hover:border-slate-700 transition-colors"
                 >
                   <div>
                     <span className="inline-block rounded-md bg-slate-800 px-2.5 py-1 text-xs font-medium text-slate-300 mb-4">
-                      {mod.tag}
+                      {modulo.etiqueta}
                     </span>
-                    <h3 className="text-lg font-semibold text-white">{mod.title}</h3>
+                    <h3 className="text-lg font-semibold text-white">{modulo.titulo}</h3>
                     <p className="mt-3 text-sm text-slate-400 leading-relaxed">
-                      {mod.description}
+                      {modulo.descripcion}
                     </p>
                   </div>
                   <div className="mt-6 pt-4 border-t border-slate-800/80 flex items-center justify-between text-xs text-slate-400">
-                    <span>Audit status</span>
-                    <span className="text-blue-400 font-medium">Verified Active</span>
+                    <span>Estado de auditoría</span>
+                    <span className="text-blue-400 font-medium">Verificado Activo</span>
                   </div>
                 </div>
               ))}
@@ -181,14 +181,14 @@ export default function HomePage() {
         </section>
       </main>
 
-      {/* Footer */}
+      {/* Pie de Página */}
       <footer className="border-t border-slate-800/80 bg-slate-950 py-8">
         <div className="mx-auto max-w-7xl px-6 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-400">
-          <p>© 2026 CoreFlow Systems Inc. All rights reserved.</p>
+          <p>© 2026 CoreFlow Systems Inc. Todos los derechos reservados.</p>
           <div className="flex space-x-6">
-            <span>Enterprise Distribution</span>
-            <span>Security Benchmark v2.4</span>
-            <span>Zero Vulnerabilities</span>
+            <span>Distribución Empresarial</span>
+            <span>Estándar de Seguridad v2.4</span>
+            <span>Cero Vulnerabilidades</span>
           </div>
         </div>
       </footer>

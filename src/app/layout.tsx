@@ -10,9 +10,9 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Enterprise Web Platform | Docker Containerized",
+  title: "Plataforma Web Empresarial | Contenerizada con Docker",
   description:
-    "High-performance Next.js application containerized with multi-stage Docker builds and Alpine Linux.",
+    "Aplicación Next.js de alto rendimiento contenerizada mediante compilación multi-stage de Docker y Alpine Linux.",
 };
 
 export default function RootLayout({
